@@ -1,0 +1,213 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 1280px){
+    .pricing-container{
+    display: flex;
+    }
+}
+@media screen and (max-width: 400px){
+    .pricing-container{
+    display: block;
+    }
+}
+
+.pricing-header {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+.switch-button {
+    background: #fcf8f8;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #b2adad;
+    position: relative;
+    padding-right: 100px;
+}
+.switch-button:before {
+    content: "Yearly";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    pointer-events: none;
+}
+.switch-button-checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+}
+.switch-button-checkbox:checked + .switch-button-label:before {
+    transform: translateX(100px);
+    transition: transform 300ms linear;
+}
+.switch-button-checkbox + .switch-button-label {
+    position: relative;
+    padding: 15px 0;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+}
+.switch-button-checkbox + .switch-button-label:before {
+    content: "";
+    background: #3b1a42;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    transform: translateX(0);
+    transition: transform 300ms;
+}
+.switch-button-checkbox + .switch-button-label .switch-button-label-span {
+    position: relative;
+}
+
+.pricing-cycle {
+    margin-left: 22rem;
+    margin-top: 2rem;
+}
+@media screen and (max-width: 400px){
+    .pricing-cycle{
+        margin: 2rem 0 1rem 2rem;
+    }
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 0.9rem 2rem;
+    border: 0;
+    outline: 0;
+}
+
+.rounded-btn {
+    border-radius: 30px;
+}
+
+.primary-btn {
+
+    background-color: #673AB7;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: #F5F5F5;
+    color: #673AB7;
+}
+
+.pricing-plans{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(1, 100fr) / repeat(4, 50fr);
+    grid-template-areas: "card1 card2 card3 card4";
+}
+@media screen and (max-width: 1280px){
+    .pricing-plans{
+        display: flex;
+    }
+}
+@media screen and (max-width: 400px){
+    .pricing-plans{
+        display: block;
+    }
+}
+
+.card1{
+    width: 15rem;
+    height: 28rem;
+    border: 1px solid white;
+    margin: 2rem 1rem 1rem 14rem;
+    border-radius: 10px;
+
+}
+@media screen and (max-width: 400px){
+    .card1{
+        margin: 2rem 1rem 1rem 1rem;
+    }
+}
+
+.card2{
+    width: 15rem;
+    height: 28rem;
+    border: 1px solid white;
+    margin: 2rem 0 1rem 2rem;
+    border-radius: 10px;
+}
+
+.card3{
+    width: 15rem;
+    height: 28rem;
+    border: 1px solid #a024bd;
+    margin: 2rem 0 1rem 0;
+    border-radius: 10px;
+    background-color: #3b1a42;
+}
+@media screen and (max-width: 400px){
+    .card3{
+        margin: 2rem 0 1rem 2rem;
+    }
+}
+
+.card4{
+    width: 15rem;
+    height: 28rem;
+    border: 1px solid #d7d3d3;
+    margin: 2rem 1rem 1rem 0;
+    border-radius: 10px;
+}
+@media screen and (max-width: 400px){
+    .card4{
+        margin: 2rem 0 1rem 2rem;
+    }
+}
+
+.btn-plan{
+    font-size: 0.8rem;
+    padding: 0.8rem 3.5rem;
+    border: 0;
+    outline: 0;
+}
+.rounded-btn-plan{
+    border-radius: 10px;
+}
+.first-btn{
+    background-color: #ffffff;
+    color: #b64cce;
+    border: 1px solid #b64cce ;
+}
+.second-btn{
+    background-color: #b64cce;
+    color: #f6f3f6;
+}
+/*.third-btn:hover{*/
+/*    background-color: #673AB7;*/
+/*    color: white;*/
+/*}*/
